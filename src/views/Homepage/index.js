@@ -10,6 +10,7 @@ import {
   Icon,
   Image,
   Menu,
+  Card,
   Segment
 } from 'semantic-ui-react'
 
@@ -76,20 +77,22 @@ export default class Homepage extends Component {
           </Segment>
 
         
-       <Container style={{ padding: '8em 0em' }} vertical>
-       <Header as='h3' style={{ fontSize: '2em', textAlign:'left', paddingLeft:'2em'}}>Tips and tricks, made personal!</Header>
+       <Container style={{ padding: '2em 0em' }} vertical>
+       <Header as='h3' style={{ fontSize: '2em', textAlign:'center', padding: '1em 1em'}}>Community-sourced travel videos</Header>
         <Grid divided='vertically'>
-    		<Grid.Row columns={2}>
+    		<Grid.Row columns={3}>
 
      		 <Grid.Column>
-        		<p style={{ fontSize: '1.33em', paddingLeft: '3em', textAlign: 'left'}}>
-                Begin exploring now, by clicking on one of the many cities listed below. On each page, you will find community-generated photos and videos telling you what (and what not to) do based on their experiences in that city!
-                </p>
+        		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Post Short Travel Videos</Header>
+        		<Icon name='record' size='huge'/>
       		</Grid.Column>
       		<Grid.Column>
-        		<p style={{ fontSize: '1.33em', textAlign: 'left', paddingRight:'3em' }}>
-                  New cities are being added all the time, as we are able to generate more content based on your suggestions and submitted photos and videos. Check back often, and don't forget to submit your own travel experiences.
-                </p>
+        		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Search for Videos By City</Header>
+        		<Icon name='search' size='huge'/>
+      		</Grid.Column>
+      		<Grid.Column>
+        		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Make Collections</Header>
+        		<Icon name='save' size='huge'/>
       		</Grid.Column>
 
     		</Grid.Row>
@@ -97,37 +100,105 @@ export default class Homepage extends Component {
     	</Container>
 
     	<Container style={{ paddingBottom: '3em' }}>
+    	<Divider
+              as='h4'
+              className='header'
+              horizontal
+              style={{ margin: '2em 0em', fontWeight:'normal', fontSize:'2em', color:'#5e9cc7'}}
+            >
+              <p>Featured Cities</p>
+        </Divider>
+
     	<Grid>
-    	  <Grid.Row>
-      		<Grid.Column width={4}>
-        	  <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
-        	  <Divider hidden />
-        	  <Image src='https://static.pexels.com/photos/273037/pexels-photo-273037.jpeg' />
-      		</Grid.Column>
-      		<Grid.Column width={4}>
-        	  <Image src='https://static.pexels.com/photos/281502/pexels-photo-281502.jpeg' />
-        	  <Divider hidden />
-        	  <Image src='https://static.pexels.com/photos/190178/pexels-photo-190178.jpeg' />
-      		</Grid.Column>
-      		<Grid.Column width={8}>
-        	  <Image src='https://static.pexels.com/photos/211357/pexels-photo-211357.jpeg' />
-      		</Grid.Column>
+    	  <Grid.Row style={{ paddingLeft: '5em'}}>
+      		   <Grid.Column width={5}>
+	        <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
+	      </Grid.Column>
+	      <Grid.Column width={5}>
+	        <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
+	      </Grid.Column>
+	      <Grid.Column width={5}>
+  			 <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
+	      </Grid.Column>
     		</Grid.Row>
 
-	     <Grid.Row>
-	      <Grid.Column width={4}>
-	        <Image src='https://static.pexels.com/photos/208901/pexels-photo-208901.jpeg' />
-	        <Divider hidden />
-	        <Image src='https://static.pexels.com/photos/227417/pexels-photo-227417.jpeg' />
+	     <Grid.Row style={{ paddingLeft: '5em'}}>
+	      <Grid.Column width={5}>
+	        <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
 	      </Grid.Column>
-	      <Grid.Column width={8}>
-	        <Image src='https://static.pexels.com/photos/193478/pexels-photo-193478.jpeg' />
+	      <Grid.Column width={5}>
+	        <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
 	      </Grid.Column>
-	      <Grid.Column width={4}>
-	        <Image src='https://static.pexels.com/photos/547494/pexels-photo-547494.jpeg' />
-	        <Divider hidden />
-	        <Image src='https://static.pexels.com/photos/288929/pexels-photo-288929.jpeg' />
+	      <Grid.Column width={5}>
+  			 <Card raised style={{ borderRadius:'0'}}>
+			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			    </Card.Content>
+			    <Card.Content extra>
+			      <a>
+			        <Icon name='film' />
+			        10 videos
+			      </a>
+			    </Card.Content>
+  			</Card>
 	      </Grid.Column>
+	     
 	     </Grid.Row>
 	  </Grid>
       </Container>
