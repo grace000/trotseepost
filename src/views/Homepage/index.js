@@ -13,6 +13,9 @@ import {
   Card,
   Segment
 } from 'semantic-ui-react'
+import ReallySmoothScroll from 'really-smooth-scroll'
+
+ReallySmoothScroll.shim()
 
 const LandpageImage = styled(Image)`
  {
@@ -64,11 +67,15 @@ export default class Homepage extends Component {
              <Divider hidden />
            
               <Button size='huge' color='teal'>
-                Get Started
+                <a href="#gettingStarted" style={{color:'#ffffff'}}>Get Started</a>
                 <Icon name='right arrow' />
               </Button>
 
-              <Button size='huge' color='teal'>
+              <Button 
+              	size='huge' 
+              	color='teal'
+              	as='a'
+              	>
                 Login/Sign Up
               </Button>
              
@@ -77,7 +84,7 @@ export default class Homepage extends Component {
           </Segment>
 
         
-       <Container style={{ padding: '2em 0em' }} vertical>
+       <Container id='gettingStarted' style={{ padding: '2em 0em' }} vertical>
        <Header as='h3' style={{ fontSize: '2em', textAlign:'center', padding: '1em 1em'}}>Community-sourced travel videos</Header>
         <Grid divided='vertically'>
     		<Grid.Row columns={3}>
@@ -113,9 +120,9 @@ export default class Homepage extends Component {
     	  <Grid.Row style={{ paddingLeft: '5em'}}>
       		   <Grid.Column width={5}>
 	        <Card raised style={{ borderRadius:'0'}}>
-			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Image src='https://static.pexels.com/photos/62348/pexels-photo-62348.jpeg' />
 			    <Card.Content>
-			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>New Delhi</Card.Header>
 			    </Card.Content>
 			    <Card.Content extra>
 			      <a>
@@ -127,9 +134,9 @@ export default class Homepage extends Component {
 	      </Grid.Column>
 	      <Grid.Column width={5}>
 	        <Card raised style={{ borderRadius:'0'}}>
-			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Image src='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg' />
 			    <Card.Content>
-			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>New York City</Card.Header>
 			    </Card.Content>
 			    <Card.Content extra>
 			      <a>
@@ -141,9 +148,9 @@ export default class Homepage extends Component {
 	      </Grid.Column>
 	      <Grid.Column width={5}>
   			 <Card raised style={{ borderRadius:'0'}}>
-			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Image src='https://static.pexels.com/photos/432361/pexels-photo-432361.jpeg' />
 			    <Card.Content>
-			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>Portland</Card.Header>
 			    </Card.Content>
 			    <Card.Content extra>
 			      <a>
@@ -158,9 +165,9 @@ export default class Homepage extends Component {
 	     <Grid.Row style={{ paddingLeft: '5em'}}>
 	      <Grid.Column width={5}>
 	        <Card raised style={{ borderRadius:'0'}}>
-			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Image src='https://static.pexels.com/photos/600622/pexels-photo-600622.jpeg' />
 			    <Card.Content>
-			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>Amsterdam</Card.Header>
 			    </Card.Content>
 			    <Card.Content extra>
 			      <a>
@@ -172,9 +179,9 @@ export default class Homepage extends Component {
 	      </Grid.Column>
 	      <Grid.Column width={5}>
 	        <Card raised style={{ borderRadius:'0'}}>
-			    <Image src='https://static.pexels.com/photos/213407/pexels-photo-213407.jpeg' />
+			    <Image src='https://static.pexels.com/photos/10922/pexels-photo-10922.jpeg' />
 			    <Card.Content>
-			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>San Francisco</Card.Header>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>Rome</Card.Header>
 			    </Card.Content>
 			    <Card.Content extra>
 			      <a>
