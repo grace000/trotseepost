@@ -13,7 +13,7 @@ import {
   Card,
   Segment
 } from 'semantic-ui-react'
-
+import { Link } from 'react-router-dom'
 
 
 const LandpageImage = styled(Image)`
@@ -31,7 +31,7 @@ const FixedMenu = () => (
     
       <Menu inverted pointing secondary>
         <Menu.Item className='item' position="right">
-          <Button as='a' inverted>Log in</Button>
+          <Button as={ Link } to="/login" inverted>Log in</Button>
           <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
         </Menu.Item>
       </Menu>
@@ -66,14 +66,15 @@ export default class Homepage extends Component {
              <Divider hidden />
            
               <Button size='huge' color='teal'>
-                <a href="#gettingStarted" style={{color:'#ffffff'}}>Get Started</a>
+                <a href="#" style={{color:'#ffffff'}}>Get Started</a>
                 <Icon name='right arrow' />
               </Button>
 
               <Button 
               	size='huge' 
               	color='teal'
-              	as='a'
+              	as={Link}
+              	to="/login"
               	>
                 Login/Sign Up
               </Button>
