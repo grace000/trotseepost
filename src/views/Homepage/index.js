@@ -13,9 +13,8 @@ import {
   Card,
   Segment
 } from 'semantic-ui-react'
-import ReallySmoothScroll from 'really-smooth-scroll'
 
-ReallySmoothScroll.shim()
+
 
 const LandpageImage = styled(Image)`
  {
