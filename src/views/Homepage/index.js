@@ -48,7 +48,8 @@ export default class Homepage extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: 0}}
+            style={{ padding: 0 }}
+            // style={{ minHeight: 700, padding: 0}}
             vertical
           >
 
@@ -58,20 +59,22 @@ export default class Homepage extends Component {
               
               <Header
                 as='h1'
-                content='TrotSeePost'
+                content='TrotSee'
                 inverted
-                style={{ fontSize: '5em', fontWeight: 'normal', marginBottom: 0, marginTop: '2em' }}
+                style={{ fontSize: '8em', marginBottom: 0, marginTop: '1em', fontFamily: 'Josefin Sans'}}
               />
 
              <Divider hidden />
            
-              <Button size='huge' color='teal'>
+              <Button 
+                size='medium' 
+                color='teal'>
                 <a href="#" style={{color:'#ffffff'}}>Get Started</a>
                 <Icon name='right arrow' />
               </Button>
 
               <Button 
-              	size='huge' 
+              	size='medium' 
               	color='teal'
               	as={Link}
               	to="/login"
@@ -84,25 +87,38 @@ export default class Homepage extends Component {
           </Segment>
 
         
-       <Container id='gettingStarted' style={{ padding: '2em 0em' }} vertical>
+       <Container id='gettingStarted' style={{ padding: '2em 0em' }}>
        <Header as='h3' style={{ fontSize: '2em', textAlign:'center', padding: '1em 1em'}}>Community-sourced travel videos</Header>
-        <Grid divided='vertically'>
+        <Grid>
     		<Grid.Row columns={3}>
 
      		 <Grid.Column>
         		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Post Short Travel Videos</Header>
-        		<Icon name='record' size='huge'/>
       		</Grid.Column>
       		<Grid.Column>
         		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Search for Videos By City</Header>
-        		<Icon name='search' size='huge'/>
       		</Grid.Column>
       		<Grid.Column>
         		<Header as="h2" style={{ fontSize: '1.2em', textAlign:'center', paddingBottom:'1em', fontWeight:'normal'}}>Make Collections</Header>
-        		<Icon name='save' size='huge'/>
       		</Grid.Column>
 
     		</Grid.Row>
+
+        <Grid.Row container columns={3}>
+
+          <Grid.Column width='centered three'>
+            <Icon name='record' size='huge'/>
+          </Grid.Column>
+          <Grid.Column width='centered three'>
+            <Icon name='search' size='huge'/>
+          </Grid.Column>
+          <Grid.Column width='centered three'>
+            <Icon name='save' size='huge'/>
+          </Grid.Column>
+
+        </Grid.Row>
+
+
     	</Grid>
     	</Container>
 

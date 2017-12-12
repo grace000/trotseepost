@@ -6,10 +6,14 @@ import './App.css'
 import Homepage from "../src/views/Homepage"
 import Login from "../src/views/Login"
 import Profile from "../src/views/Profile"
+import SearchHome from "../src/views/SearchHome"
+
 
 const renderHomepage       = () => <Homepage />
 const renderProfile        = () => <Profile />
+const renderSearchHome     = () => <SearchHome />
 const renderLogin          = () => <Login />
+
 
 const App = () => (
   <Router>
@@ -17,7 +21,7 @@ const App = () => (
       <Switch>
         <Route exact path="/"                      render={renderHomepage} />
         <Route exact path="/profile"               render={renderProfile } />
-        <Route exact path="/login"               render={renderLogin } />
+        <Route exact path="/login"                 render={renderLogin } />
         <Redirect path="/" />
       </Switch>
     

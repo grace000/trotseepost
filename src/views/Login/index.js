@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 export default class Login extends Component {
  
@@ -40,7 +41,13 @@ export default class Login extends Component {
               type='password'
             />
 
-            <Button color='teal' fluid size='large'>Login</Button>
+            <Button 
+            	color='teal' 
+            	fluid size='large'
+            	as={Link}
+            	to="/profile">
+            		Login
+            </Button>
           </Segment>
         </Form>
         <Message>
