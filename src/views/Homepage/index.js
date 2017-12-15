@@ -31,7 +31,7 @@ const FixedMenu = () => (
     
       <Menu inverted pointing secondary>
         <Menu.Item className='item' position="right">
-          <Button as={ Link } to="/login" inverted>Log in</Button>
+          {/*<Button as={ Link } to="/login" inverted>Log in</Button>*/}
           <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
         </Menu.Item>
       </Menu>
@@ -76,8 +76,8 @@ export default class Homepage extends Component {
               <Button 
               	size='medium' 
               	color='teal'
-              	as={Link}
-              	to="/login"
+                as={Link}
+                to='/login'
               	>
                 Login/Sign Up
               </Button>

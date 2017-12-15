@@ -22,6 +22,7 @@ import MainHeader from '../Layout/MainHeader'
 import UserSave from '../UserSave'
 import UserPost from '../UserPost'
 import SearchHome from '../SearchHome'
+import Homepage from '../Homepage'
 
 
 const MenuStyle = {
@@ -30,7 +31,7 @@ const MenuStyle = {
 }
 
 const routes = [
-  { path: '/seachhome',
+  { path: '/searchhome',
     exact: true,
     main: () => <SearchHome/>
   },
@@ -62,7 +63,7 @@ export default class LeftPanel extends Component{
 				        		   active={activeItem === 'trotSee'} 
 				        		   onClick={this.handleItemClick} 
 				        		   as={ Link } 
-				        		   to='/seachhome'
+				        		   to='/searchhome'
 				        		   style={{fontSize:'2em', padding:'15px', color: '#fff', fontFamily: 'Josefin Sans'}}/>
 				        <Menu.Item name='posted trots' 
 				        		   active={activeItem === 'posted trots'} 

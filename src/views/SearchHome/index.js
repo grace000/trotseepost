@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Input, Grid, Header } from 'semantic-ui-react'
 import MainHeader from '../Layout/MainHeader'
-import UserPost from '../UserPost'
+import ActiveSearch from '../ActiveSearch'
 import LeftPanel from '../Layout/LeftPanel'
 
 export default class SearchHome extends Component {
@@ -25,7 +25,7 @@ export default class SearchHome extends Component {
 			    />
   			</Grid.Column>
   			</Grid.Row>
-  			<UserPost/>
+  			<ActiveSearch/>
   			</div>
 		)
 	}
