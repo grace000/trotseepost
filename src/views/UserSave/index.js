@@ -1,15 +1,15 @@
-import { Button, Grid, Header, Icon, Image, Card, Embed } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Image, Card, Embed, Input } from 'semantic-ui-react'
 import React, { Component } from 'react'
-import LeftPanel from '../Layout/LeftPanel'
-import MapHeader from '../Layout/Map'
-import MainHeader from '../Layout/MainHeader'
+
 import SearchHome from '../SearchHome'
 
 const GridStyle = {
 	margin:'0',
 	float: 'right',
-	padding:'1em'
+	padding:'0 1em'
+
 }
+
 
 export default class UserSave extends Component {
  
@@ -18,6 +18,24 @@ export default class UserSave extends Component {
     return (
     	<div>
     	<Grid style={GridStyle}>
+
+    	<Grid.Row style={{padding:'0 1em', display:'block', width:'100%'}}>
+
+    		<Header 
+			    content='Collected Trots'
+			    style={{fontSize:'2em', margin: 'auto'}}
+			    />
+
+			<Input 
+			    action={{ color: 'teal', icon: 'search' }}
+			    actionPosition='right'
+			    placeholder='Search...'
+			    defaultValue='Chicago'
+			    style={{width: '30em', float:'right', margin: 'auto'}}
+  			/>
+  				
+  		</Grid.Row>
+
     	  <Grid.Row style={{ paddingLeft: '5em'}}>
       		   <Grid.Column width={5}>
 	        <Card raised style={{ borderRadius:'0'}}>

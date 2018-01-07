@@ -1,14 +1,13 @@
-import { Button, Grid, Header, Icon, Image, Card, Embed, Modal, Form, TextArea } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Image, Card, Embed, Modal, Form, TextArea, Input } from 'semantic-ui-react'
 import React, { Component } from 'react'
-import LeftPanel from '../Layout/LeftPanel'
-import MapHeader from '../Layout/Map'
-import MainHeader from '../Layout/MainHeader'
+
 
 const GridStyle = {
 	margin:'0',
-	float: 'right',
-	padding:'1em'
+	float: 'right'
+	
 }
+
 
 export default class UserPost extends Component {
  
@@ -16,6 +15,22 @@ export default class UserPost extends Component {
   render() {
     return (
     	<Grid style={GridStyle}>
+
+    	  <Grid.Row style={{padding:'0 1em', display:'block', width:'100%'}}>
+					
+					<Header 
+					    content='My Shared Trots'
+					    style={{fontSize:'2em', margin: 'auto'}}
+					    />
+					<Input 
+					    action={{ color: 'teal', icon: 'search' }}
+					    actionPosition='right'
+					    placeholder='Search...'
+					    defaultValue='Chicago'
+					    style={{width: '30em', float:'right', margin: 'auto'}}
+		  			/>
+
+		  	</Grid.Row>
 
     	  <Grid.Row style={{ paddingLeft: '5em'}}>
       		   <Grid.Column width={5}>
