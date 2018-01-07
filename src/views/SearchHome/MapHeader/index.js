@@ -1,7 +1,6 @@
 import { Button, Grid, Header, Icon, Image, Divider, Sticky, Segment } from 'semantic-ui-react'
 import React, { Component } from 'react'
-import LeftPanel from '../Layout/LeftPanel'
-import MapHeader from '../Layout/Map'
+
 
 
 const GridStyle = {
@@ -18,8 +17,12 @@ const HeaderStyle = {
 	height:'15em'
 }
 
+const Style = {
+  zIndex: '10',
 
- export default class MainHeader extends Component {
+}
+
+ export default class MapHeader extends Component {
 
   constructor(){
   	super();
@@ -27,11 +30,12 @@ const HeaderStyle = {
   }
   render() {
     return (
-      <div>
-        <div>
-        	<iframe src={this.name} allowfullscreen style={{width:'100%', height:'20vw', frameBorder:'0', border:'0', paddingBottom:'2em'}}></iframe>
+      
+        <div style={Style}>
+        	<iframe src={this.name} allowfullscreen style={{width:'100%', height:'26vw', frameBorder:'0', border:'0', paddingBottom:'1em'}}></iframe>
         </div>
-      </div>
+     
+      
     );
   }
 };

@@ -18,16 +18,35 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import MainHeader from '../Layout/MainHeader'
-import UserSave from '../UserSave'
-import UserPost from '../UserPost'
-import SearchHome from '../SearchHome'
-import Homepage from '../Homepage'
 
+import UserSave from '../../UserSave'
+import UserPost from '../../UserPost'
+import SearchHome from '../../SearchHome'
+import MainHeader from '../MainHeader'
+import MapHeader from '../../SearchHome/MapHeader'
+
+
+const { Column, Row } = Grid
 
 const MenuStyle = {
-	height: '100%',
-	backgroundColor:'#bbf0f0'
+	minHeight: '100%',
+	backgroundColor:'#bbf0f0',
+	zIndex: '10',
+	position: 'fixed',
+	display: 'inline-block',
+	top: '0',
+	left:'0',
+	width: '15%'
+
+}
+
+const ContainerStyle = {
+	width:'85%',
+	left:'15%',
+	position:'relative',
+	overflow:'hidden',
+	right:'0'
+
 }
 
 const routes = [
@@ -56,7 +75,13 @@ export default class LeftPanel extends Component{
 
     	return (
     		<Router>
-    			<div style={{height: '100vh', display: 'flex'}}>
+
+    		<div>
+    		
+    			<div><MapHeader /></div>
+    			<div style={ContainerStyle}>
+
+
 			      	<Menu style={MenuStyle} pointing secondary vertical>
 			        
 				        <Menu.Item name='trotSee' 
@@ -70,16 +95,16 @@ export default class LeftPanel extends Component{
 				        		   onClick={this.handleItemClick}
 				        		   as={ Link } 
 				        		   to='/userpost'/>
-				        <Menu.Item name='saved trots' 
-				        		   active={activeItem === 'saved trots'} 
+				        <Menu.Item name='collected trots' 
+				        		   active={activeItem === 'collected trots'} 
 				        		   onClick={this.handleItemClick}
 				        		   as={ Link } 
 				        		   to='/usersave'/>
 			      	</Menu>
 		     
-			       <div style={{ flex: 1, padding: '10px' }}>
+			       <div style={{ flex: 1}}>
+			   		
 			        {routes.map((route, index) => (
-			          
 			          <Route
 			            key={index}
 			            path={route.path}
@@ -88,8 +113,8 @@ export default class LeftPanel extends Component{
 			          />
 	        		))}
 	      			</div>
-
       			</div>
+      		</div>
 		    </Router>
 		)
 	}

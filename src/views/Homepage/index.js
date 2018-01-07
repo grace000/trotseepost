@@ -13,7 +13,11 @@ import {
   Card,
   Segment
 } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 
 const LandpageImage = styled(Image)`
@@ -44,6 +48,7 @@ export default class Homepage extends Component {
 
   render() {
     return (
+    <Router>
       <div>
           <Segment
             inverted
@@ -239,6 +244,7 @@ export default class Homepage extends Component {
         </Segment>
 
       </div>
+      </Router>
     )
   }
 }
