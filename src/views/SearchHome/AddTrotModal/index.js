@@ -1,8 +1,7 @@
 import { Button, Grid, Header, Icon, Image, Card, Embed, Modal, Form, TextArea } from 'semantic-ui-react'
 import React, { Component } from 'react'
-import LeftPanel from '../Layout/LeftPanel'
-import MapHeader from '../Layout/Map'
-import MainHeader from '../Layout/MainHeader'			
+
+			
 
 export default class AddTrotModal extends Component {
 	render () {
