@@ -48,7 +48,7 @@ export default class Homepage extends Component {
 
   render() {
     return (
-    <Router>
+   
       <div>
           <Segment
             inverted
@@ -244,7 +244,7 @@ export default class Homepage extends Component {
         </Segment>
 
       </div>
-      </Router>
+      
     )
   }
 }
