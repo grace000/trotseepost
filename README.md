@@ -2,10 +2,10 @@
 
 TrotSee is a community sourced travel guide application. Search cities and discover short video guides from travelers like yourself. Get the inside scoop on hidden gems and the best advise when traveling popular destinations. Explore, share, and discover your Trots!
 
-##Screenshots
+## Screenshots
 ![Login Page/Create New Profile](https://user-images.githubusercontent.com/21062007/34691551-87c8bbc0-f482-11e7-86ad-b1cfd60d6098.png)
 
-##Technologies
+## Technologies
 - ReactJS 
 - NodeJS
 - ExpressJS
@@ -13,7 +13,7 @@ TrotSee is a community sourced travel guide application. Search cities and disco
 - Google Maps API
 - User Login Authentication 
 
-##Demo
+## Demo
 [https://trotsee.herokuapp.com/]
 
 ## Installation
