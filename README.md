@@ -27,6 +27,7 @@ What to install and how for local development
 		   cd my-app
 		   npm start
 - mongo:   visit mongodb.com and download...
+
 ```
 
 ## Authors
