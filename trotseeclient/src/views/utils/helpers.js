@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const Helper = {
+const helpers = {
 	
 	runVideoQuery: function() {
     return axios.get("/videos");
   },
 }
 
-export default Helper;
+export default helpers;

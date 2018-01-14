@@ -14,7 +14,9 @@ var VideoSchema = new Schema ({
     	restaurants: String,
     	sightseeing: String,
     	events: String,
-    	nightlife: String
+    	nightlife: String,
+    	museum: String,
+    	festival: String
     }, 
 	location: {
 		type: String

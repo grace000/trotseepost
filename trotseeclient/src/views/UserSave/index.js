@@ -1,7 +1,10 @@
 import { Button, Grid, Header, Icon, Image, Card, Embed, Input } from 'semantic-ui-react'
 import React, { Component } from 'react'
-
+import helpers from '../utils/helpers'
 import SearchHome from '../SearchHome'
+import axios from 'axios'
+
+
 
 const GridStyle = {
 	margin:'0',
@@ -12,6 +15,27 @@ const GridStyle = {
 
 
 export default class UserSave extends Component {
+
+	constructor() {
+    		super();
+  		this.state = {title:'Test Title', author: ''};
+    	this.runVideoQuery = this.runVideoQuery.bind(this);
+  	}
+	
+	componentDidMount() {
+    	console.log('component mounted');
+  	}
+  
+  	componentWillReceiveProps(nextProps) {
+    	console.log('props received');
+  	}
+	
+	runVideoQuery(){
+		return axios.get("/videos")
+      	.then(function(response) {
+        console.log('video query ran');
+      });
+  	}
  
 
   render() {
@@ -30,10 +54,37 @@ export default class UserSave extends Component {
 			    action={{ color: 'teal', icon: 'search' }}
 			    actionPosition='right'
 			    placeholder='Search...'
-			    defaultValue='Chicago'
+			    defaultValue='Search Here'
 			    style={{width: '30em', float:'right', margin: 'auto'}}
   			/>
   				
+  		</Grid.Row>
+
+  		<Grid.Row style={{ paddingLeft: '5em'}}>
+  		 <Grid.Column width={5}>
+	        <Card raised style={{ borderRadius:'0'}}>
+			    <Embed
+				    id='iKk6_2-AAGc'
+				    placeholder='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg'
+				    source='youtube'
+				  />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }} content={this.state.title}></Card.Header>
+			    </Card.Content>
+  			</Card>
+	      </Grid.Column>
+	      <Grid.Column width={5}>
+  			 <Card raised style={{ borderRadius:'0'}}>
+			    <Embed
+				    id='O6Xo21L0ybE'
+				    placeholder='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg'
+				    source='youtube'
+				  />
+			    <Card.Content>
+			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>Portland</Card.Header>
+			    </Card.Content>
+  			</Card>
+	      </Grid.Column>
   		</Grid.Row>
 
 	  	<Grid.Row style={{ paddingLeft: '5em'}}>
