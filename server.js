@@ -18,15 +18,6 @@ const config = require('./config');
     process.env.MONGOLAB_URL ||
     'mongodb://localhost:27017/trotseeLocal';
 
- // var uristring =
- //    process.env.MONGODB_URI ||
- //    process.env.MONGOLAB_URL ||
- //    'mongodb://localhost:27017/trotseeLocal';
-
- // var uristring =
- //    process.env.MONGODB_URI ||
- //    process.env.MONGOLAB_URL;
-
 mongoose.connection.openUri(uristring, function (err, res) {
   if (err) {
   console.log ('ERROR connecting to: ' + uristring + '. ' + err);
@@ -34,25 +25,6 @@ mongoose.connection.openUri(uristring, function (err, res) {
   console.log ('Succeeded connected to: ' + uristring);
   }
 });
-
-// mongoose.connect(uristring, function (err, res) {
-//   if (err) {
-//   console.log ('ERROR connecting to: ' + uristring + '. ' + err);
-//   } else {
-//   console.log ('Succeeded connected to: ' + uristring);
-//   }
-// });
-
-// if (process.env.MONGOLAB_URI) {
-//   console.log("using MONGODB")
-//   mongoose.connect(process.env.MONGOLAB_URI);
-// } else {
-//   console.log("using localhost")
-//   mongoose.connect('mongodb://localhost:27017/trotseeLocal', {
-//   useMongoClient: true,
-// });
-// }
-
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
