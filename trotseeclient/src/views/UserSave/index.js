@@ -36,9 +36,9 @@ export default class UserSave extends Component {
   				
   		</Grid.Row>
 
-    	  <Grid.Row style={{ paddingLeft: '5em'}}>
-      		   <Grid.Column width={5}>
-	        <Card raised style={{ borderRadius:'0'}}>
+	  	<Grid.Row style={{ paddingLeft: '5em'}}>
+  		   	<Grid.Column width={5}>
+	        	<Card raised style={{ borderRadius:'0'}}>
 			    <Embed
 				    id='O6Xo21L0ybE'
 				    placeholder='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg'
@@ -47,10 +47,10 @@ export default class UserSave extends Component {
 			    <Card.Content>
 			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>New Delhi</Card.Header>
 			    </Card.Content>
-  			</Card>
-	      </Grid.Column>
-	      <Grid.Column width={5}>
-	        <Card raised style={{ borderRadius:'0'}}>
+				</Card>
+      		</Grid.Column>
+      		<Grid.Column width={5}>
+	        	<Card raised style={{ borderRadius:'0'}}>
 			    <Embed
 				    id='iKk6_2-AAGc'
 				    placeholder='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg'
@@ -59,10 +59,10 @@ export default class UserSave extends Component {
 			    <Card.Content>
 			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>New York City</Card.Header>
 			    </Card.Content>
-  			</Card>
-	      </Grid.Column>
-	      <Grid.Column width={5}>
-  			 <Card raised style={{ borderRadius:'0'}}>
+				</Card>
+      		</Grid.Column>
+      		<Grid.Column width={5}>
+				 <Card raised style={{ borderRadius:'0'}}>
 			    <Embed
 				    id='O6Xo21L0ybE'
 				    placeholder='https://static.pexels.com/photos/356844/pexels-photo-356844.jpeg'
@@ -71,9 +71,10 @@ export default class UserSave extends Component {
 			    <Card.Content>
 			      <Card.Header style={{ color: '#808080', textAlign:'left' }}>Portland</Card.Header>
 			    </Card.Content>
-  			</Card>
-	      </Grid.Column>
-    		</Grid.Row>
+				</Card>
+      		</Grid.Column>
+		</Grid.Row>
+    	
     	</Grid>
     	</div>
     )
